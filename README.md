@@ -1,3 +1,6 @@
+
+![photo_2025-11-11_12-30-39](https://github.com/user-attachments/assets/d1737e7c-6460-4536-a03f-9490f607c0e2)
+
 # Heart Disease Prediction
 
 A machine learning project for predicting heart disease from clinical features using ensemble methods and logistic regression.
@@ -55,6 +58,9 @@ Three classifiers are evaluated:
 | Logistic Regression | 85.9% | 80.5% | Baseline, good generalization |
 | Decision Tree (regularized) | 91.7% | 81.9% | max_depth=5, min_samples_split=10 |
 | Random Forest | 99.6% | 85.2% | Best test accuracy, 100 estimators |
+
+<img width="576" height="469" alt="output" src="https://github.com/user-attachments/assets/31b05f0c-9306-4806-b8ec-372f8c560c29" />
+
 
 ## Project Structure
 
