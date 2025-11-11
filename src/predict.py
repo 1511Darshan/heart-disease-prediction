@@ -13,10 +13,10 @@ import pandas as pd
 
 def load_model(path):
     """Load trained model from disk.
-    
+
     Args:
         path (str): Path to model file.
-        
+
     Returns:
         model: Loaded model.
     """
@@ -25,11 +25,11 @@ def load_model(path):
 
 def predict(model, X):
     """Make predictions on new data.
-    
+
     Args:
         model: Trained model.
         X: Feature matrix.
-        
+
     Returns:
         np.ndarray: Predicted classes.
     """
@@ -38,11 +38,11 @@ def predict(model, X):
 
 def predict_proba(model, X):
     """Get prediction probabilities.
-    
+
     Args:
         model: Trained model.
         X: Feature matrix.
-        
+
     Returns:
         np.ndarray: Prediction probabilities.
     """
@@ -50,30 +50,22 @@ def predict_proba(model, X):
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Make predictions using trained model"
-    )
+    parser = argparse.ArgumentParser(description="Make predictions using trained model")
     parser.add_argument(
-        "--model-path",
-        required=True,
-        help="Path to trained model file"
+        "--model-path", required=True, help="Path to trained model file"
     )
-    parser.add_argument(
-        "--input",
-        required=True,
-        help="Path to input CSV file"
-    )
+    parser.add_argument("--input", required=True, help="Path to input CSV file")
     args = parser.parse_args()
 
     print("Loading model...")
     model = load_model(args.model_path)
-    
+
     print("Loading data...")
     X = pd.read_csv(args.input)
-    
+
     print("Making predictions...")
     predictions = predict(model, X)
-    
+
     print(f"Predictions: {predictions}")
     print("✓ Inference complete!")
 

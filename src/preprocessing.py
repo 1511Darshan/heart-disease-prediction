@@ -8,10 +8,10 @@ import pandas as pd
 
 def load_data(path):
     """Load and validate dataset.
-    
+
     Args:
         path (str): Path to CSV file.
-        
+
     Returns:
         pd.DataFrame: Loaded dataset.
     """
@@ -21,10 +21,10 @@ def load_data(path):
 
 def remove_duplicates(df):
     """Remove duplicate records.
-    
+
     Args:
         df (pd.DataFrame): Input dataset.
-        
+
     Returns:
         pd.DataFrame: Dataset with duplicates removed.
     """
@@ -33,10 +33,10 @@ def remove_duplicates(df):
 
 def check_missing(df):
     """Check for missing values.
-    
+
     Args:
         df (pd.DataFrame): Input dataset.
-        
+
     Returns:
         pd.Series: Missing value counts per column.
     """
@@ -45,11 +45,11 @@ def check_missing(df):
 
 def split_features_target(df, target_column="target"):
     """Split features and target variable.
-    
+
     Args:
         df (pd.DataFrame): Input dataset.
         target_column (str): Name of target column.
-        
+
     Returns:
         tuple: (X, y) feature matrix and target vector.
     """

@@ -12,11 +12,13 @@ from src.preprocessing import (
 @pytest.fixture
 def sample_data():
     """Create sample dataframe for testing."""
-    return pd.DataFrame({
-        "age": [25, 35, 45, 55, 25],
-        "cholesterol": [200, 220, 210, 230, 200],
-        "target": [0, 1, 0, 1, 0],
-    })
+    return pd.DataFrame(
+        {
+            "age": [25, 35, 45, 55, 25],
+            "cholesterol": [200, 220, 210, 230, 200],
+            "target": [0, 1, 0, 1, 0],
+        }
+    )
 
 
 def test_remove_duplicates(sample_data):
